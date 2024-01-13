@@ -1,0 +1,94 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17181A;
+    color: #FFF;
+    box-sizing: border-box;
+    background-image: url(https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.AllPage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    @media screen and (max-width: 700px) {
+       flex-direction: column;
+       }
+}
+
+
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FormContainer{
+    width: 400px;
+    padding: 20px 0;
+}
+
+
+.Container{
+    height: fit-content;
+    background-color: #0E0D0B;
+    flex-direction: column;
+    width: 90%;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.Container input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+}
+
+
+.input-container{
+    margin: 10px 0;
+    width: 80%;
+    height: 60px;
+}
+
+
+.s-btn{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(228,197,143);
+    color: #0E0D0B;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.s-btn:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+input{
+    background-color: #1A1B1D;
+    border: none;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 95%;
+}
+
+

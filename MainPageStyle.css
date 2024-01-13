@@ -1,0 +1,344 @@
+body {
+  background-color: #121212;
+  color: #ffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+.Navbar {
+  background-color: transparent;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 10%;
+  position: relative;
+  @media screen and (max-width: 700px) {
+    justify-content: center;
+    height: 100px;
+    padding: 15px 0;
+    flex-direction: column;
+  }
+}
+
+
+.Links{
+  @media screen and (max-width: 700px) {
+    margin: 10px 0;
+   }
+}
+
+.Links a,
+.Services a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ___________________________________________ */
+.HeroSection {
+  background-image: url(https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1381&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  height: 75vh;
+  position: relative;
+  opacity: 0.7;
+}
+
+.Hero-Content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFF;
+  text-align: center;
+  
+}
+
+.Hero-Content h1{
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* __________________________________________ */
+
+.Menu {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.MenuList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 75%;
+  @media screen and (max-width: 700px) {
+    width: 90%;
+  }
+}
+
+.MenuCard {
+  width: 370px;
+  margin: 20px 20px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  width: 120px;
+  height: 90px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+.Card-content {
+  width: 70%;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.desc-container {
+  margin-left: 5px;
+}
+
+.add-To-Cart {
+  cursor: pointer;
+  transition: 10s;
+  background-color: transparent;
+  border: none;
+}
+
+.add-To-Cart svg:hover {
+  fill: red;
+  transition: 0.5;
+}
+/* _________________________________________________________ */
+.Table{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0;
+}
+
+.Table-Form{
+  width: 50%;
+  height: 400px;
+  background-color: black;
+  padding: 20px;
+  @media screen and (max-width: 700px) {
+    height: fit-content;
+
+  }
+}
+
+.Title-form{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.row1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+
+}
+
+.Table-Input , .D-Input , .M-Input{
+  background-color: #1A1B1D;
+  border: none;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.Table-Input{
+  width: 45%;
+  margin: 10px;
+  height: 30px;
+  @media screen and (max-width: 700px) {
+    width: 90%;
+  }
+}
+
+.D-Input{
+  width: 30%;
+  margin: 10px;
+  height: 30px;
+  @media screen and (max-width: 700px) {
+    width: 90%;
+  }
+}
+
+.M-Input{
+  width: 100%;
+  margin: 9px;
+  height: 70px;
+  @media screen and (max-width: 700px) {
+    width: 90%;
+  }
+}
+
+.book-table{
+  background-color: rgb(228,197,143);
+  width: 95%;
+  height: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* ________________________________________ */
+
+footer {
+  background-color: white;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: #17181A;
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.left-footer, .center-footer, .right-footer {
+  padding-left: 50px;
+  flex: 1;
+  margin: 10px;
+  text-align: left;
+}
+
+.center-footer {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.right-footer {
+  text-align: right;
+  padding-right: 70px;
+  padding-bottom: 25px;
+}
+
+.center-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.center-footer li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.center-footer a {
+  color:white;
+  text-decoration: none;
+}
+
+.center-footer a:hover {
+  border-bottom: 1px solid white;
+}
+
+
+
+/* _______________________________________________________________ */
+/* Resevation page */
+
+.Hero-reserve{
+  background-image: url(https://images.pexels.com/photos/19722321/pexels-photo-19722321/free-photo-of-plastic-chairs-by-table-on-balcony.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  position: relative;
+  @media screen and (max-width: 700px) {
+   display: none;
+  }
+
+
+}
+
+.Hero-res-Content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFF;
+  text-align: center;
+}
+
+.Hero-res-Content h1{
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.Crud{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.Crud-Table{
+ width: 60%;
+ margin: 20px 0;
+ @media screen and (max-width: 700px) {
+  width: 90%;
+}
+
+}
+
+
+.Row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  border-bottom: 1px solid gray;
+}
+
+.Row div{
+  width: calc(100% / 5);
+  padding: 5px;
+  height:fit-content;
+}
+
+.theimg{
+  width: 70px;
+}
+
+.Order-img{
+  width: 100%;
+}

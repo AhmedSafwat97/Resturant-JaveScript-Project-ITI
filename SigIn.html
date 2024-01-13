@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resturant-Signin</title>
+    <link rel="stylesheet" href="./Style.css" />
+    <script defer src="./Main.js"></script>
+  </head>
+  <body>
+    <div class="AllPage">
+      <h1 class="Header-Title" style="margin: 30px 0">Hello from our Resturant</h1>
+
+      <div class="FormContainer flex-center">
+        <div class="Container flex-center">
+          <h2 style="margin: 10px 0; text-align: center">SignIn</h2>
+            
+          <div id="Message"></div>
+          <div class="input-container">
+            <label>Email</label>
+            <input
+              class="Input"
+              type="text"
+              id="Email"
+              placeholder="Enter Your Email"
+            />
+          </div>
+          <div class="input-container">
+            <label>Password</label>
+            <input
+              class="Input"
+              type="text"
+              id="Password"
+              placeholder="Enter Your Password"
+            />
+          </div>
+          <button onclick="SignIn()" class="s-btn">Submit</button>
+          <p>You Don't Have Account ? </p>
+          <a href="./Index.html">Signup</a>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
