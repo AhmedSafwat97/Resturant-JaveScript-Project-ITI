@@ -15,8 +15,8 @@
         <a href="#Menu">OurMenu</a>
         <a href="#Table">Book Table</a>
       </div>
-      <div class="Services">
-        <a href="./Order.html"">
+      <div class="Services" >
+        <a href="./Order.html" id="Services" >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -30,7 +30,7 @@
             />
           </svg>
         </a>
-        <a href="./BookingTable.html">
+        <a href="./BookingTable.html" >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -62,6 +62,8 @@
 
     <section class="Menu" id="Menu">
       <h1 style="text-align: center">Delicious Menu</h1>
+      <input type="text" class="Search" id="Search" placeholder="Search" onkeyup="SeachOrder(event)" />
+      <h2 id="Search-Message" class="Search-Message"></h2>
       <div class="MenuList" id="MenuList">
       </div>
     </section>
@@ -111,6 +113,7 @@
               id="Person"
               placeholder="Person Number"
             />
+            
           </div>
 
           <div class="row1">
@@ -133,21 +136,19 @@
 
     <footer>
       <div class="footer-container">
-        <div class="left-footer">
-          <p>+1011223344</p>
+        <div class="">
+          <p>+201110351045</p>
           <p>Foad street , Alexandria</p>
         </div>
 
-        <div class="center-footer">
-          <ul class="footerList">
-            <li><a>Home</a></li>
-            <li><a>OurMenu</a></li>
-            <li><a>BookTable</a></li>
-            <li><a>Order</a></li>
-          </ul>
+        <div class="Footer-Links">
+            <a>Home</a>
+            <a>OurMenu</a>
+            <a>BookTable</a>
+            <a>Order</a>
         </div>
 
-        <div class="right-footer">
+        <div class="">
           <a>Privacy policy</a>
           <a>cookies</a>
         </div>

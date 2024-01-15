@@ -25,6 +25,7 @@ body {
 
 
 .Links{
+
   @media screen and (max-width: 700px) {
     margin: 10px 0;
    }
@@ -35,6 +36,25 @@ body {
   margin: 0 10px;
   text-decoration: none;
   color: #fff;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.S-order{
+  border: 2px solid yellow;
+}
+
+.Notification{
+  background-color: red;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ___________________________________________ */
@@ -44,7 +64,6 @@ body {
   background-size: cover;
   height: 75vh;
   position: relative;
-  opacity: 0.7;
 }
 
 .Hero-Content {
@@ -71,6 +90,21 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: 30px 0;
+}
+.Search{
+  width: 40%;
+  height: 30px;
+  border: none;
+  padding: 5px;
+  background-color: #1A1B1D;
+  color: white;
+  margin-top: 20px;
+}
+
+
+.Search-Message{
+  margin-top: 20px;
+  text-align: center;
 }
 
 .MenuList {
@@ -151,9 +185,10 @@ body {
   height: 400px;
   background-color: black;
   padding: 20px;
+
   @media screen and (max-width: 700px) {
     height: fit-content;
-
+    width: 80%;
   }
 }
 
@@ -218,63 +253,33 @@ body {
 /* ________________________________________ */
 
 footer {
-  background-color: white;
   color: white;
   text-align: center;
   padding: 20px;
   background-color: #17181A;
 }
 
-
-.footer-container {
+.footer-container{
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (max-width: 700px) {
+    justify-content: center;
+    flex-direction: column;
+    }
 }
 
-.left-footer, .center-footer, .right-footer {
-  padding-left: 50px;
-  flex: 1;
-  margin: 10px;
-  text-align: left;
+.footer-container div {
+  @media screen and (max-width: 700px) {
+    margin: 10px 0;
+    }
 }
 
-.center-footer {
-  text-align: center;
-  padding-bottom: 25px;
+.Footer-Links a{
+ margin: 0 10px;
 }
-
-.right-footer {
-  text-align: right;
-  padding-right: 70px;
-  padding-bottom: 25px;
-}
-
-.center-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.center-footer li {
-  display: inline;
-  margin-right: 15px;
-}
-
-.center-footer a {
-  color:white;
-  text-decoration: none;
-}
-
-.center-footer a:hover {
-  border-bottom: 1px solid white;
-}
-
-
 
 /* _______________________________________________________________ */
-/* Resevation page */
 
 .Hero-reserve{
   background-image: url(https://images.pexels.com/photos/19722321/pexels-photo-19722321/free-photo-of-plastic-chairs-by-table-on-balcony.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
@@ -308,37 +313,71 @@ footer {
   justify-content: center;
   align-items: center;
   min-height: 400px;
+  flex-direction: column;
+}
+
+
+.Crud h3{
+  width: 70%;
 }
 
 .Crud-Table{
- width: 60%;
+ width: 70%;
  margin: 20px 0;
+ padding: 5px;
  @media screen and (max-width: 700px) {
   width: 90%;
+  display: flex;
+  min-height: 380px;
+  
 }
-
 }
 
 
 .Row{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: black;
   border-bottom: 1px solid gray;
+  @media screen and (max-width: 700px) {
+   flex-direction: column;
+   border-bottom: none;
+   min-height: fit-content;
+   padding: 20px 0;
+
+  }
 }
 
 .Row div{
-  width: calc(100% / 5);
-  padding: 5px;
+  min-width: calc(100% / 5) ;
   height:fit-content;
+  padding: 0 5px;
+  @media screen and (max-width: 700px) {
+    min-width: none;
+    text-align: center;
+    min-height: calc(100% / 5) ;
+   }
 }
 
 .theimg{
-  width: 70px;
+  width: 30px;
 }
 
 .Order-img{
   width: 100%;
+}
+
+.delete-btn{
+  margin: 10px;
+}
+
+.Total{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px 0;
+  padding-right: 20px;
+  background-color: black;
+  font-size: 20px;
+  font-weight: 600;
 }

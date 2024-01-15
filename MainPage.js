@@ -72,10 +72,12 @@ var Menu = [
 
 var Cart = [];
 
-function displayMenu() {
-  const menuContainer = document.getElementById("MenuList");
+var TablesBooking = []
 
-  Menu.forEach((item) => {
+function displayMenu(displayMenu) {
+  const menuContainer = document.getElementById("MenuList");
+  menuContainer.innerHTML = ''
+  displayMenu.forEach((item) => {
     const menuCard = document.createElement("div");
     menuCard.className = "MenuCard flex";
 
@@ -106,10 +108,12 @@ function displayMenu() {
   });
 }
 
-// Call the function to display the menu
-displayMenu();
 
 function addToCart(OrderId) {
+  var searchMessage = document.getElementById("Search-Message")
+  var Services = document.getElementById("Services")
+  var createNoti = document.createElement("div")
+  createNoti.className = "Notification"
   // to get the item that i select
   var selectedOrder = Menu.find((O) => O.id == OrderId);
 
@@ -120,14 +124,51 @@ function addToCart(OrderId) {
 
   if (!cartItem) {
     Cart.push({ ...selectedOrder, Quantity: 1 });
+    createNoti.innerHTML = `${Cart.length}`
+    setTimeout(function () {
+      searchMessage.innerHTML = "Your Item Added Successfully"
+    }, 2000);
   } else {
     cartItem.Quantity += 1;
+    setTimeout(function () {
+      searchMessage.innerHTML = "This item quantity has been increased"
+    }, 2000);
   }
 
   localStorage.setItem("OrderCart", JSON.stringify(Cart));
+  Services.appendChild(createNoti)
+
 }
 
-var TablesBooking = [];
+
+function SeachOrder(event) {
+  var searchValue = document.getElementById("Search").value;
+  var searchMessage = document.getElementById("Search-Message")
+
+  if (searchValue &&  event.key === "Enter") {
+    var searchItems = Menu.filter(item =>
+      item.Title.toLowerCase().startsWith(searchValue.toLowerCase())
+    );
+    if (searchItems.length === 0 ) {
+      searchMessage.innerHTML = "There Is No Item Matches Your Search"
+      console.log("Empty array");
+      displayMenu([])
+    } else {
+      console.log(searchItems)
+      searchMessage.innerHTML = ""
+    displayMenu(searchItems);
+    }
+  } else {
+    displayMenu(Menu);
+    searchMessage.innerHTML = ""
+  }
+
+
+
+
+}
+
+displayMenu(Menu);
 
 function BookTable() {
   var Name = document.getElementById("Name");
@@ -137,6 +178,7 @@ function BookTable() {
   var Person = document.getElementById("Person");
   var Message = document.getElementById("Message");
   var ReservMessage = document.getElementById("T-Message");
+
 
   var NewId = TablesBooking.length + 1;
 
@@ -150,40 +192,37 @@ function BookTable() {
     Message: Message.value,
   };
 
-  if (
-    (Name.value != "",
-    Phone.value != "",
-    Date.value != "",
-    StartTime.value != "",
-    Person.value != "")
-  ) {
+  localStorage.setItem("BookingTable" , JSON )
+
+  if (Name.value && Phone.value && Date.value && StartTime.value && Person.value) {
     var checkreservation = TablesBooking.find(function (T) {
       return T.Date === Date.value && T.StartTime === StartTime.value;
     });
 
     if (!checkreservation) {
       TablesBooking.push(tableobject);
-      console.log(TablesBooking);
       localStorage.setItem("BookingTable", JSON.stringify(TablesBooking));
-      ReservMessage.innerHTML = "You have Booked A table successfully";
+      ReservMessage.innerHTML = "You have booked a table successfully";
       setTimeout(function () {
-        ReservMessage.innerHTML = "You have Booked A table successfully";
+        ReservMessage.innerHTML = "";
       }, 2000);
+
+      Name.value = "";
+      Phone.value = "";
+      Date.value = "";
+      StartTime.value = "";
+      Person.value = "";
+      Message.value = "";
     } else {
-      console.log("You have Already booked a table at this time");
+      ReservMessage.innerHTML = "You have already booked a table at this time";
       setTimeout(function () {
-        ReservMessage.innerHTML =
-          "You have Already booked a table at this time";
+        ReservMessage.innerHTML = "";
       }, 2000);
     }
+  } else {
+    ReservMessage.innerHTML = "Please fill the form inputs";
+    setTimeout(function () {
+      ReservMessage.innerHTML = "";
+    }, 2000);
   }
-
-  Name.value = "";
-  Phone.value = "";
-  Date.value = "";
-  StartTime.value = "";
-  Person.value = "";
-  Message.value = "";
 }
-
-
